@@ -3,3 +3,12 @@ A combined TBD Quarto revealjs theme for the TRANSIEVES project that allows for 
 - grep templates
 - publish
 
+## How to install
+```
+quarto install extension  tinhvo-TUM/quarto-revealjs-TRANSIEVES
+```
+## How to use it
+After you install the template, create a new directory with all files needed:
+```
+quarto use template tinhvo-TUM/quarto-revealjs-TRANSIEVES
+```
