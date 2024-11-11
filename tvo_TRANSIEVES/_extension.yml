@@ -1,0 +1,23 @@
+title: tvo_TRANSIEVES
+author: Shafayet Khan Shafee
+version: 1.2.8
+quarto-required: ">=1.2.0"
+contributes:
+  format:
+      revealjs:
+          logo: resources/TU_Darmstadt_Logo.svg
+          header-logo: resources/TRANSIEVES.png
+          # TODO csl: IEEE?.csl
+          theme: TRANSIEVES.scss
+          slide-number: true
+          preview-links: true
+          progress: true
+          width: 2100
+          height: 1080
+          margin: 0.05
+          self-contained: true
+          title-slide-attributes: 
+            # data-background-image: "resources_main/watercolour_sys02_img41_stormy-seas.jpg"
+            center-title-slide: false
+# More inspirations:
+# https://github.com/maltehueckstaedt/dzhw_revealjs_template/blob/main/_extensions/dzhw
