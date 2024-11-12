@@ -1,0 +1,232 @@
+---
+title: "Documentation"
+footer: "Tinh Vo, @Event "
+author: "Tinh Vo"
+date: last-modified
+date-format: "DD MMM, YYYY"
+format: 
+  tvo_TRANSIEVES-revealjs:
+    center-title-slide: false
+    # center: false
+filters: 
+  - reveal-header
+slide-level: 3
+number-sections: false
+
+---
+
+# Sample section, in reality this would be Background or Motivation
+
+## Incremental slides asdasdasdsada sdasdasdsadasdasdasdsada sdasdasdsadasdasdasdsada sdasdasdsadasdasdasdsad
+
+::: {.incremental}
+- Step 1
+- Step 2
+:::
+Only list items are incremented
+
+Reddit--comment-style sparse for linebreak  
+And `\ \ ` for hard newline
+
+
+. . .
+
+or with 3 dots , like ". . ."
+
+
+. . . 
+
+Outside of `.incremental`, list items must have empty lines above `. . .  `
+
+### Subsubsection
+
+This is a check for persistent header: h2 should be on upper right
+
+
+## Columns
+:::: {.columns}
+
+only split col inside `::: {.column}   :::` 
+
+Collumn size with `width=`, but `style="width: 40%"` is better
+
+::: {.column  width="40%"}
+Left column
+:::
+
+::: {.column width="60%"}
+Right column
+:::
+
+::::
+
+Codeblock col-template for your copying pleasure:
+```
+:::: {.columns}
+
+::: {.column .col-border-right style="width: 50%,font-size: 50%;"}
+:::
+
+::: {.column style="width: 50%,font-size: 50%;"}
+:::
+
+::::
+``` 
+
+## Layouts
+
+<!-- TODO  -->
+- with photo: https://quarto.org/docs/presentations/revealjs/advanced.html#absolute-position
+
+## Formatting 
+
+Apply into `{style="key:value;"}` or `.smaller`  
+Applicable `{key}`s    
+
+    - font-size: {#}%; // This is parsed as pseudo code - commonmark issue
+
+
+
+::: {.panel-tabset}
+
+### Some useful properties
+`.scollable` scroll long code  
+`.fragment` delay display until next arrow cmd
+
+### Some useless functionalities
+
+- Tabs : `::: {.panel-tabset} :::` , with ### being each tab
+- Overlaying https://quarto.org/docs/presentations/revealjs/advanced.html#stack-layout
+:::
+
+
+
+## Citations 
+Citation with footnotes ^[Referencing 1.] via:  
+
+::: aside
+pre-footer eg. citation with `:aside:`, above `^[]` citations:
+:::
+
+<!-- TODO --> squashed center 
+
+## Python embed
+:::: {.columns}
+
+::: {.column width="60%" style="font-size: 80%;"}
+::: {.incremental}
+Render code with "{.code}" eg. `{.python}`
+
+- Highlight lines `code-line-numbers=`, *no spaces!*
+- Incremental highlights with `|` separation
+- Leave the entire block highlighted with `|` at start
+- eg. `{.python code-line-numbers="7,9|10"}`
+
+```{.python .code-overflow-wrap .smaller code-line-numbers="|7,9|10" }
+#| label: fig-1
+#| fig-cap: "Demo plot name"
+#| echo: true
+#| output-location: column
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(  subplot_kw = {'projection': 'polar'} )
+ax.plot(theta, r);ax.set_rticks([0.5, 1, 1.5, 2]); ax.grid(True) ; plt.show()
+```
+tagalong css styles with `style="key:value;"`  
+code wrapping does not work (yet)
+
+
+:::
+
+:::
+
+::: {.column style="width: 40%; " }
+```{python }
+#| label: fig-1
+#| fig-cap: "Demo plot name"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(  subplot_kw = {'projection': 'polar'} )
+ax.plot(theta, r);ax.set_rticks([0.5, 1, 1.5, 2]); ax.grid(True) ; plt.show()
+```
+(see forced squashing)
+Code should be separate from source items, size adjustment & other formatting likely
+
+
+:::
+Or to dump the plot to next slide (no heading), use 
+```
+#| echo: true
+#| output-location: column
+```
+::::
+
+
+
+## Python embed 2 {style="font-size: 0.7em;"}
+
+To really echo true source,  use output options:
+
+- fragment
+- slide
+- column
+- column-fragment (just  a combi)
+
+
+```{python }
+#| label: fig-2
+#| fig-cap: "Source-echoed plot"
+#| echo: true
+#| output-location: column
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(  subplot_kw = {'projection': 'polar'} 
+,figsize=(3,3)) # this for size 
+ax.plot(theta, r);
+ax.set_rticks([0.5, 1, 1.5, 2]); 
+ax.grid(True) ; plt.show()
+```
+
+## Python embed 3
+<!-- TODO -->
+- [ ] ggplotly
+- [ ] 3D: https://github.com/bwlewis/rthreejs
+- [ ] webGL: http://cran.at.r-project.org/web/packages/rglwidget/index.html
+
+## Presenting anims
+- Zoom: Alt + Click (or Ctrl + Click on Linux)
+- Speaker view: press s
+- Click the hamburger menu or press m 1
+- Black out: press b
+- Code anim: with `## {auto-animate=true}` between 2 codeblocks
+
+## Menu for chapters
+TODO https://github.com/Martinomagnifico/quarto-simplemenu?tab=readme-ov-file
+
+## Themeworks 
+
+## Advanced topics
+<!-- TODO -->
+https://quarto.org/docs/presentations/revealjs/advanced.html#title-slide
+
+
+
+Use `::: header  :::` to add text on top 
+
+::: header
+
+see here asdasdasd
+:::

@@ -16,6 +16,7 @@ contributes:
           height: 1080
           margin: 0.05
           self-contained: true
+          sc-sb-title: true
           title-slide-attributes: 
             # data-background-image: "resources_main/watercolour_sys02_img41_stormy-seas.jpg"
             center-title-slide: false
