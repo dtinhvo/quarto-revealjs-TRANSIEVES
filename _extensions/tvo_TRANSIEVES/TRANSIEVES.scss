@@ -36,6 +36,7 @@ $stanford-white: #FFFDFD; // Stanford white color
   h1 {
     font-family: $title-font;
     color: #000000;
+    text-transform: capitalize;
     // background:    linear-gradient(to top, $stanford-red 0%, $stanford-gray 25%);
   }
 
@@ -70,7 +71,6 @@ $stanford-white: #FFFDFD; // Stanford white color
   h2 {
     font-family: $title-font;
     color: $stanford-red;
-    text-transform: capitalize;
   }
 
   h3 {
@@ -204,3 +204,11 @@ $presentation-title-slide-text-align: left;
 
 
 
+// inline-fragment
+.inline-fragment {
+  display: flex;
+}
+
+.inline-fragment p {
+  padding-right: 10px;
+}

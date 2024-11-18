@@ -1,7 +1,9 @@
 ---
 title: "Documentation"
 footer: "Tinh Vo, @Event "
-author: "Tinh Vo"
+author: 
+  name: Tinh Vo
+  affiliation: Technische Universität Darmstadt
 date: last-modified
 date-format: "DD MMM, YYYY"
 format: 
@@ -17,7 +19,7 @@ number-sections: false
 
 # Sample section, in reality this would be Background or Motivation
 
-## Incremental slides asdasdasdsada sdasdasdsadasdasdasdsada sdasdasdsadasdasdasdsada sdasdasdsadasdasdasdsad
+## Incremental slides , also let's say that this section is really long so that the next h3 will include it all for sizing
 
 ::: {.incremental}
 - Step 1
@@ -40,8 +42,8 @@ Outside of `.incremental`, list items must have empty lines above `. . .  `
 
 ### Subsubsection
 
-This is a check for persistent header: h2 should be on upper right
-
+This is a check for persistent header: h2 should be on upper right  
+h3 is not considered as a header
 
 ## Columns
 :::: {.columns}
@@ -73,10 +75,20 @@ Codeblock col-template for your copying pleasure:
 ::::
 ``` 
 
-## Layouts
+## Photo management
+with `[Caption](/path/to/image.png)`
 
 <!-- TODO  -->
-- with photo: https://quarto.org/docs/presentations/revealjs/advanced.html#absolute-position
+- [ ] [layout / positioning](https://quarto.org/docs/presentations/revealjs/advanced.html#absolute-position): 
+  - Positioning : a verbose example  
+    `{.absolute top=200 left=0 width="350" height="300"}`, vice versa
+- [ ] fading, direction
+- [Overlaying](https://quarto.org/docs/presentations/revealjs/advanced.html#stack-layout)
+  - `::: {.r-stack} ` into `![](image.png){.fragment}` <!-- I suppose overlay is just no fragment -->
+- Vertical stretch-to-fill
+  - Enable: `{.r-stretch}`
+  - Disable: `{.nostretch}`
+
 
 ## Formatting 
 
@@ -96,9 +108,39 @@ Applicable `{key}`s
 ### Some useless functionalities
 
 - Tabs : `::: {.panel-tabset} :::` , with ### being each tab
-- Overlaying https://quarto.org/docs/presentations/revealjs/advanced.html#stack-layout
 :::
 
+## Highlighting with nested fragments
+For a text:  
+
+::: {.fragment }
+Normal fragment are its own line/block , wrapped in `.fragment`
+:::
+
+
+:::: {.inline-fragment}
+But if you want to do it inline, 
+
+::: {.fragment fragment-index=3}
+use `:::: {.inline-fragment}` (4x:) *in addition*, wrapping the block. 
+:::
+::: {.fragment .smaller fragment-index=2}
+this was hacked with css 
+:::
+:::: 
+
+For irregular order, add `fragment-index=`
+
+::: {.fragment }
+indexed fragments will show first by defaul ie. cannot intercept ordering implicitly
+:::
+
+For an equation: 
+$$
+  x =
+\class{fragment}{{} x(x+1) + 1(x+1)}
+$$
+Use `\class{fragment}{ ... }` , but ordering appearance here is impossible 
 
 
 ## Citations 
@@ -108,7 +150,6 @@ Citation with footnotes ^[Referencing 1.] via:
 pre-footer eg. citation with `:aside:`, above `^[]` citations:
 :::
 
-<!-- TODO --> squashed center 
 
 ## Python embed
 :::: {.columns}
@@ -216,17 +257,21 @@ ax.grid(True) ; plt.show()
 ## Menu for chapters
 TODO https://github.com/Martinomagnifico/quarto-simplemenu?tab=readme-ov-file
 
-## Themeworks 
+## Separating slides
+<!-- TODO main file scheme ala. main.qmd? or chapters go to ./chapters/_#.qmd-->
+<!-- Commented out bc code can be embedded as include -->
 
-## Advanced topics
+```
+
+<!-- {{< include /path/to/_file.qmd >}} -->
+
+```  
+Subfiles **MUST** start with a `_`
+
+## Automation
 <!-- TODO -->
-https://quarto.org/docs/presentations/revealjs/advanced.html#title-slide
 
-
-
-Use `::: header  :::` to add text on top 
-
-::: header
-
-see here asdasdasd
-:::
+- [ ] Add blank slides: 
+  - [ ] parse largest file number: use max() in bash
+  - [ ] touch a qmd with max+1
+  - [ ] include that filename to clipboard

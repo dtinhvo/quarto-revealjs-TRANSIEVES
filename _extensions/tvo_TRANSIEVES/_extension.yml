@@ -20,5 +20,6 @@ contributes:
           title-slide-attributes: 
             # data-background-image: "resources_main/watercolour_sys02_img41_stormy-seas.jpg"
             center-title-slide: false
+          include-before: [ '<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {enableAssistiveMml: false}});</script>']
 # More inspirations:
 # https://github.com/maltehueckstaedt/dzhw_revealjs_template/blob/main/_extensions/dzhw
