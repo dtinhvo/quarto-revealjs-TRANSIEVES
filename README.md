@@ -1,6 +1,5 @@
 A combined TBD Quarto revealjs theme for the TRANSIEVES project that allows for persistent headers modified from [reveal-header](https://github.com/shafayetShafee/reveal-header)
-<!-- TODO -->
-- publish CI
+A demo slidedeck of the theme, along with documentation of quarto+revealjs formatting can be found [here](https://tinhvo-tum.github.io/quarto-revealjs-TRANSIEVES/)
 
 ## How to install
 ```

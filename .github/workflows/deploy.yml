@@ -1,0 +1,55 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  pull-requests: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: pre-release
+          tinytex: false
+      - uses: actions/checkout@v4
+
+      - name: add Python plotting dependencies
+        shell: bash
+        run: |
+          pip install numpy matplotlib jupyter matplotlib pandas
+          
+      - name: Render Quarto Project
+        shell: bash
+        run: |
+          quarto add tinhvo-TUM/quarto-revealjs-TRANSIEVES --no-prompt --log-level warning
+          quarto render docu.qmd --to tvo_TRANSIEVES-revealjs --output index.html --output-dir _site
+
+      
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: '_site'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
