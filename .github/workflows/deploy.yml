@@ -40,7 +40,6 @@ jobs:
       - name: Render Quarto Project
         shell: bash
         run: |
-          quarto add tinhvo-TUM/quarto-revealjs-TRANSIEVES --no-prompt --log-level warning
           quarto render docu.qmd --to tvo_TRANSIEVES-revealjs --output index.html --output-dir _site
 
       
