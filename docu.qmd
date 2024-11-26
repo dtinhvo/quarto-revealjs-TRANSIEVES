@@ -270,8 +270,11 @@ Subfiles **MUST** start with a `_`
 
 ## Automation
 <!-- TODO -->
-
+ 
 - [ ] Add blank slides: 
   - [ ] parse largest file number: use max() in bash
   - [ ] touch a qmd with max+1
   - [ ] include that filename to clipboard
+
+## TODO - md basics are different
+https://quarto.org/docs/authoring/markdown-basics.html
