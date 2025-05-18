@@ -81,6 +81,15 @@ Codeblock col-template for your copying pleasure:
 There is only one option known to work, `style="text-align:center"` or put `text-align:center` into style block
 :::
 
+::: {.r-stack}
+You can stack stuff on top of each other (any block) with the `.r-stack` property
+
+See how it works?
+
+BUT! apparently this shrinks the column width
+::: 
+
+
 ## Photo management
 with `[Caption](/path/to/image.png)`
 
