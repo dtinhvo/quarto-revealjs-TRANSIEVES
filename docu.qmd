@@ -50,7 +50,7 @@ h3 is not considered as a header
 
 only split col inside `::: {.column}   :::` 
 
-Collumn size with `width=`, but `style="width: 40%"` is better
+Collumn size with `width=` - WARNING! `style="width: 40%"` is NOT correct!
 
 ::: {.column  width="40%"}
 Left column
@@ -66,10 +66,10 @@ Codeblock col-template for your copying pleasure:
 ```
 :::: {.columns}
 
-::: {.column .col-border-right style="width: 50%,font-size: 50%;"}
+::: {.column .col-border-right width="50%" style="font-size: 50%;"}
 :::
 
-::: {.column style="width: 50%,font-size: 50%;"}
+::: {.column width="50%" style="font-size: 50%;"}
 :::
 
 ::::
@@ -185,7 +185,7 @@ code wrapping does not work (yet)
 
 :::
 
-::: {.column style="width: 40%; " }
+::: {.column width="40%" }
 ```{python }
 #| label: fig-1
 #| fig-cap: "Demo plot name"
