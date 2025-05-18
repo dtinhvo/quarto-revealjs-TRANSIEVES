@@ -137,6 +137,9 @@ with `[Caption](/path/to/image.png)`
   - Disable: `{.nostretch}`
 
 
+
+
+
 ## Formatting 
 
 Apply into `{style="key:value;"}` or `.smaller`  
@@ -157,7 +160,10 @@ Applicable `{key}`s
 - Tabs : `::: {.panel-tabset} :::` , with ### being each tab
 :::
 
-## Highlighting with nested fragments
+## Flow control
+Most basically line break `---` used to force new slide
+---
+### Fragments
 For a text:  
 
 ::: {.fragment }
