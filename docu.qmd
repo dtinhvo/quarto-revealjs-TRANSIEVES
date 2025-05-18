@@ -75,6 +75,12 @@ Codeblock col-template for your copying pleasure:
 ::::
 ``` 
 
+## Content alignment
+
+::: {style="text-align:center"}
+There is only one option known to work, `style="text-align:center"` or put `text-align:center` into style block
+:::
+
 ## Photo management
 with `[Caption](/path/to/image.png)`
 
