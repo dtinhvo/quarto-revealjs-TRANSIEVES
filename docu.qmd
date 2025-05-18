@@ -82,12 +82,44 @@ There is only one option known to work, `style="text-align:center"` or put `text
 :::
 
 ::: {.r-stack}
-You can stack stuff on top of each other (any block) with the `.r-stack` property
+You can stack stuff on top of each other (any block) with the `.r-stack` property{.fragment}
 
-See how it works?
-
-BUT! apparently this shrinks the column width
+See how it works? {.fragment}
 ::: 
+
+- To use with `.columns`, care is needed: 
+    - force full width for columns
+    - properly .block other contents
+
+```
+:::::: {.r-stack }
+
+:::: {.columns style="width: 100%;" .fragment}
+
+::: {.column width="50%"}
+Content left
+:::
+
+::: {.column width="50%" style="text-align:right"}
+Content right
+:::
+
+:::: 
+
+:::: {.block .fragment}
+Content after
+::::
+
+::::::
+```
+
+
+
+
+
+
+
+
 
 
 ## Photo management
