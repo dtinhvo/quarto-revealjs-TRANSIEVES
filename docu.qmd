@@ -12,7 +12,7 @@ format:
     # center: false
 filters: 
   - reveal-header
-slide-level: 3
+slide-level: 3 # push to 2 if disabling reveal-header
 number-sections: false
 
 ---
