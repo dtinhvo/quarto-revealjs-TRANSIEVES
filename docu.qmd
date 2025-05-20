@@ -113,6 +113,8 @@ Content after
 ::::::
 ```
 
+For images, use `fig-align="center"`
+
 
 
 
@@ -161,7 +163,9 @@ Applicable `{key}`s
 :::
 
 ## Flow control
-Most basically line break `---` used to force new slide
+
+*WARNING!* using line break `---` to force new slide will confuse yaml header -> unsafe
+
 ---
 ### Fragments
 For a text:  
