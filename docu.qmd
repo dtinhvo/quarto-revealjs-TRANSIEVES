@@ -80,9 +80,9 @@ Codeblock col-template for your copying pleasure:
 To manual line break, `\n` will not work -> use `<br>`
 
 ::: {style="text-align:center"}
-Centering : There is only one option known to work, `style="text-align:center"` or put `text-align:center` into style block
+Centering : There is only one option known to work, `style="text-align:center"`. Put this into delimiters
 
-In fact, anything to be centered should enter a centered generic block, including images
+In fact, anything to be centered can enter a centered generic block, including images
   ```
   ::: {.block style="text-align:center"}
   :::
