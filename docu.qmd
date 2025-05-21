@@ -139,12 +139,22 @@ with `[Caption](/path/to/image.png)`
 - [ ] [layout / positioning](https://quarto.org/docs/presentations/revealjs/advanced.html#absolute-position): 
   - Positioning : a verbose example  
     `{.absolute top=200 left=0 width="350" height="300"}`, vice versa
-- [ ] fading, direction
+  - offset relative from usual position, instead of absoluting  
 - [Overlaying](https://quarto.org/docs/presentations/revealjs/advanced.html#stack-layout)
   - `::: {.r-stack} ` into `![](image.png){.fragment}` <!-- I suppose overlay is just no fragment -->
 - Vertical stretch-to-fill
   - Enable: `{.r-stretch}`
   - Disable: `{.nostretch}`
+- change dir structure to source from one single ext file
+  - careful gitignore template
+  - cascading custom styles, local variable to each ppt
+- snippets
+  - br
+  - block
+  - style
+  - center
+  - fragment
+
 
 
 
