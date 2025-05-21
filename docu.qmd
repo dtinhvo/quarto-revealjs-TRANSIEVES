@@ -328,7 +328,7 @@ ax.grid(True) ; plt.show()
 TODO https://github.com/Martinomagnifico/quarto-simplemenu?tab=readme-ov-file
 
 ## Separating slides
-<!-- TODO main file scheme ala. main.qmd? or chapters go to ./chapters/_#.qmd-->
+<!-- TODO main file scheme ala. main.qmd? or chapters go to ./_chapters/_#.qmd, and include via {{< myname >}} -->
 <!-- Commented out bc code can be embedded as include -->
 
 ```
