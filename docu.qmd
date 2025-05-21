@@ -77,12 +77,14 @@ Codeblock col-template for your copying pleasure:
 
 ## Content alignment
 
+To manual line break, `\n` will not work -> use `<br>`
+
 ::: {style="text-align:center"}
-There is only one option known to work, `style="text-align:center"` or put `text-align:center` into style block
+Centering : There is only one option known to work, `style="text-align:center"` or put `text-align:center` into style block
 :::
 
 ::: {.r-stack}
-You can stack stuff on top of each other (any block) with the `.r-stack` property{.fragment}
+You can stack stuff on top of each other (any block) with the `.r-stack` property {.fragment}
 
 See how it works? {.fragment}
 ::: 
