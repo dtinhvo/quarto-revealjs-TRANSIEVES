@@ -81,6 +81,12 @@ To manual line break, `\n` will not work -> use `<br>`
 
 ::: {style="text-align:center"}
 Centering : There is only one option known to work, `style="text-align:center"` or put `text-align:center` into style block
+
+In fact, anything to be centered should enter a centered generic block, including images
+  ```
+  ::: {.block style="text-align:center"}
+  :::
+  ```
 :::
 
 ::: {.r-stack}
