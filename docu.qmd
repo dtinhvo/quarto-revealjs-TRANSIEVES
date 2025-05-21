@@ -164,9 +164,14 @@ Applicable `{key}`s
 
 ## Flow control
 
-*WARNING!* using line break `---` to force new slide will confuse yaml header -> unsafe
+Instead , use other line break strings like `***` or `___` ^[Referencing 1.]
 
----
+::: aside
+*WARNING!* using line break `---` to force new slide will confuse yaml header -> unsafe
+:::
+
+***
+
 ### Fragments
 For a text:  
 
