@@ -12,6 +12,7 @@ format:
     title-slide: false
   revealjs: 
     css: tvo_TRANSIEVES/styles.css
+    include-in-header: persistent-header/persistent-header.html
     title-slide: false
 # filters: 
   # - reveal-header
@@ -20,28 +21,17 @@ number-sections: false
 
 ---
 
+<!-- TODO file watching sometimes need a manual reset if file is mangled -->
+
 # Sample section, in reality this would be Background or Motivation
 
 ## Incremental slides , also let's say that this section is really long so that the next h3 will include it all for sizing
 
-::: {.incremental}
-- Step 1
-- Step 2
-:::
-Only list items are incremented
+.{large} Search for "Codeblock template"
 
-Reddit--comment-style sparse for linebreak  
-And `\ \ ` for hard newline
+(extended syntax for qmd is at the end)
 
 
-. . .
-
-or with 3 dots , like ". . ."
-
-
-. . . 
-
-Outside of `.incremental`, list items must have empty lines above `. . .  `
 
 ### Subsubsection
 
@@ -65,7 +55,7 @@ Right column
 
 ::::
 
-Codeblock col-template for your copying pleasure:
+Codeblock template for: Columns
 ```
 :::: {.columns}
 
@@ -78,61 +68,7 @@ Codeblock col-template for your copying pleasure:
 ::::
 ``` 
 
-## Content alignment
-
-To manual line break, `\n` will not work -> use `<br>`
-
-::: {style="text-align:center"}
-Centering : There is only one option known to work, `style="text-align:center"`. Put this into delimiters
-
-In fact, anything to be centered can enter a centered generic block, including images
-  ```
-  ::: {.block style="text-align:center"}
-  :::
-  ```
-:::
-
-::: {.r-stack}
-You can stack stuff on top of each other (any block) with the `.r-stack` property {.fragment}
-
-See how it works? {.fragment}
-::: 
-
-- To use with `.columns`, care is needed: 
-    - force full width for columns
-    - properly .block other contents
-
-```
-:::::: {.r-stack }
-
-:::: {.columns style="width: 100%;" .fragment}
-
-::: {.column width="50%"}
-Content left
-:::
-
-::: {.column width="50%" style="text-align:right"}
-Content right
-:::
-
-:::: 
-
-:::: {.block .fragment}
-Content after
-::::
-
-::::::
-```
-
-For images, use `fig-align="center"`
-
-
-
-
-
-
-
-
+{{< include sections/ContentAlignment.qmd >}}
 
 
 ## Photo management
@@ -166,7 +102,8 @@ with `[Caption](/path/to/image.png)`
 ## Formatting 
 
 Apply into `{style="key:value;"}` or `.smaller`  
-Applicable `{key}`s    
+Applicable `{key}`s:
+<!-- TODO  -->
 
     - font-size: {#}%; // This is parsed as pseudo code - commonmark issue
 
@@ -359,5 +296,26 @@ Subfiles **MUST** start with a `_`
   - [ ] touch a qmd with max+1
   - [ ] include that filename to clipboard
 
-## TODO - md basics are different
+## qmd basics are different
+
+::: {.incremental}
+- List items are auto 
+- incremented
+:::
+
+(BUG) List right after `:::` block will not work: Need a line of content before
+
+- Otherwise it will not newline  
+
+- Reddit--comment-style sparse for linebreak  
+  - And `\ \ ` for hard newline
+
+
+
+or with 3 dots , like `. . .`
+
+. . . 
+
+Outside of `.incremental`, list items must have empty lines above `. . .  `
+
 https://quarto.org/docs/authoring/markdown-basics.html

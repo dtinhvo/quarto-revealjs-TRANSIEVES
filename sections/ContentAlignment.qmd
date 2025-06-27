@@ -1,0 +1,59 @@
+## Content alignment
+
+To manual line break, `\n` will not work -> use `<br>`
+<!-- TODO <br> -->
+
+
+::: {style="text-align:center"}
+Centering : There is only one option known to work, `style="text-align:center"`. Put this into delimiters
+<!-- TODO  -->
+
+In fact, anything to be centered can enter a centered generic block, including images  
+Codeblock template for centered block:
+```
+::: {.block style="text-align:center"}
+:::
+```
+:::
+
+
+::: {.r-stack}
+::: {.fragment}
+You can stack stuff on top of each other (any block) with the `.r-stack` property 
+:::
+::: {.fragment}
+See how it works? {.fragment}
+:::
+::: 
+
+***
+
+- To use with `.columns`, care is needed: 
+    - force full width for columns
+    - properly .block other contents
+
+```
+:::::: {.r-stack }
+
+:::: {.columns style="width: 100%;" .fragment}
+
+::: {.column width="50%"}
+Content left
+:::
+
+::: {.column width="50%" style="text-align:right"}
+Content right
+:::
+
+:::: 
+
+:::: {.block .fragment}
+Content after
+::::
+
+::::::
+```
+
+For images, use `fig-align="center"`
+
+
