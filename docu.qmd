@@ -9,10 +9,13 @@ date-format: "DD MMM, YYYY"
 format: 
   tvo_TRANSIEVES-revealjs:
     center-title-slide: false
-    # center: false
-filters: 
-  - reveal-header
-slide-level: 3 # push to 2 if disabling reveal-header
+    title-slide: false
+  revealjs: 
+    css: tvo_TRANSIEVES/styles.css
+    title-slide: false
+# filters: 
+  # - reveal-header
+slide-level: 2 #
 number-sections: false
 
 ---
