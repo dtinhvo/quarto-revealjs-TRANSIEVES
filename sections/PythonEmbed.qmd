@@ -1,0 +1,58 @@
+# Python embed
+:::: {.columns}
+
+::: {.column width="60%" style="font-size: 80%;"}
+::: {.incremental}
+Render code with "{.code}" eg. `{.python}`
+
+- Highlight lines `code-line-numbers=`, *no spaces!*
+- Incremental highlights with `|` separation
+- Leave the entire block highlighted with `|` at start
+- eg. `{.python code-line-numbers="7,9|10"}`
+
+```{.python .code-overflow-wrap .smaller code-line-numbers="|7,9|10" }
+#| label: fig-1
+#| fig-cap: "Demo plot name"
+#| echo: true
+#| output-location: column
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(  subplot_kw = {'projection': 'polar'} )
+ax.plot(theta, r);ax.set_rticks([0.5, 1, 1.5, 2]); ax.grid(True) ; plt.show()
+```
+tagalong css styles with `style="key:value;"`  
+code wrapping does not work (yet)
+
+
+:::
+
+:::
+
+::: {.column width="40%" }
+```{python }
+#| label: fig-1
+#| fig-cap: "Demo plot name"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(  subplot_kw = {'projection': 'polar'} )
+ax.plot(theta, r);ax.set_rticks([0.5, 1, 1.5, 2]); ax.grid(True) ; plt.show()
+```
+(see forced squashing)
+Code should be separate from source items, size adjustment & other formatting likely
+
+
+:::
+Or to dump the plot to next slide (no heading), use 
+```
+#| echo: true
+#| output-location: column
+```
+::::

@@ -1,0 +1,19 @@
+## Centering 
+
+::: {style="text-align:center"}
+Centering : There is only one option known to work, `style="text-align:center"`. Put this into delimiters
+<!-- TODO  -->
+
+In fact, anything to be centered can enter a centered generic block, including images  
+
+:::
+
+
+::: {.callout-tip icon=false title="Codeblock template: centered block (of anything)" } 
+
+```{.markdown}
+::: {.block style="text-align:center"}
+:::
+```
+
+:::

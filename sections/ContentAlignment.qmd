@@ -3,41 +3,9 @@
 To manual line break, `\n` will not work -> use `<br>`
 <!-- TODO <br> -->
 
-## Centering 
+{{< include sections/Centering.qmd >}}
+{{< include sections/Overlaying.qmd >}}
 
-::: {style="text-align:center"}
-Centering : There is only one option known to work, `style="text-align:center"`. Put this into delimiters
-<!-- TODO  -->
-
-In fact, anything to be centered can enter a centered generic block, including images  
-
-:::
-
-
-::: {.callout-tip icon=false title="Codeblock template: centered block (of anything)" } 
-
-```{.markdown}
-::: {.block style="text-align:center"}
-:::
-```
-
-:::
-
-## Overlaying
-
-::: {.r-stack}
-::: {.fragment}
-You can stack stuff on top of each other (any block) with the `.r-stack` property 
-:::
-::: {.fragment}
-See how it works? {.fragment}
-:::
-::: 
-
-`r-stack` behaviour: 
-- `.fragment` implicitly splits into blocks not marked with .fragment to group with ones above. see #### 3 Columns  
-
-***
 
 ## Columns 
 
@@ -51,105 +19,12 @@ See how it works? {.fragment}
 
 ---
 
-### 2 Columns 
+{{< include sections/2Columns.qmd >}}
 
-::: {.callout-tip icon=false title="Codeblock template: 2 Columns" } 
-
-```{.markdown}
-:::::: {.r-stack }
-
-:::: {.columns style="width: 100%;" .fragment}
-
-::: {.column width="50%"}
-Content left
-:::
-
-::: {.column width="50%" style="text-align:right" .fragment}
-Content right
-:::
-
-:::: 
-
-::::::
-```
 
 ---
 
-Results in 
+{{< include sections/3Columns.qmd >}}
 
-:::::: {.r-stack }
-
-:::: {.columns style="width: 100%;" .fragment}
-
-::: {.column width="50%"}
-Content left
-:::
-
-::: {.column width="50%" style="text-align:right" .fragment}
-Content right
-:::
-
-:::: 
-
-::::::
-
-
-:::
-
----
-
-### 3 Columns
-
-::: {.callout-tip icon=false title="Codeblock template: 3 Columns" } 
-
-```{.markdown}
-:::::: {.r-stack }
-
-
-:::: {.columns style="width: 100%;" .fragment}
-
-::: {.column width="50%"}
-Content left
-:::
-
-::: {.column width="50%" style="text-align:right"}
-Content right
-:::
-
-:::: 
-
-:::: {.block .fragment}
-Content after
-::::
-
-::::::
-```
-
----
-
-Results in 
-
-:::::: {.r-stack }
-
-
-
-:::: {.columns style="width: 100%;" .fragment}
-
-::: {.column width="50%"}
-Content left
-:::
-
-::: {.column width="50%" style="text-align:right"}
-Content right
-:::
-
-:::: 
-
-:::: {.block .fragment}
-Content after
-::::
-::::::
-
-:::
 
 

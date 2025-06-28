@@ -14,10 +14,6 @@ format:
     css: tvo_TRANSIEVES/styles.css
     include-in-header: persistent-header/persistent-header.html # currently have no effect
     title-slide: false
-    callout-icon: false
-    callout:  
-      noicon:
-        icon: false
 filters: 
   - reveal-header
 slide-level: 2 #
@@ -29,6 +25,7 @@ number-sections: false
 <!-- TODO needs to watch also sections/ -->
 <!-- TODO!! Make styling of h1 and reveal-header the same -->
 
+# Meta 
 
 ::: {.callout-tip icon=false title="Codeblock template: TBD" } 
 
@@ -37,13 +34,17 @@ number-sections: false
 
 :::
 
+- BUGs
+  -  List right after `:::` block will not work: Need a line of content before
+  -  
 
-# Sample section, in reality this would be Background or Motivation
+(extended syntax for qmd is at the end)
+
+# Sample section
 
 ## Incremental slides , also let's say that this section is really long so that the next h3 will include it all for sizing
 
-
-(extended syntax for qmd is at the end)
+(this is to test reveal-header)
 
 
 
@@ -64,7 +65,7 @@ h3 is not considered as a header
 
 
 
-## Formatting 
+# Formatting 
 
 Apply into `{style="key:value;"}` or `.smaller`  
 Applicable `{key}`s:
@@ -82,12 +83,14 @@ Applicable `{key}`s:
 - `style="text-align:center"` to align center anything (text)
 - `.r-stretch` vertical stretch to fill (no wrapping) 
   - Disable: `{.nostretch}`
+
 ### Some useless functionalities
 
-- Tabs : `::: {.panel-tabset} :::` , with ### being each tab
+- Tabs : `::: {.panel-tabset} :::` , with `###` being each tab
+
 :::
 
-## Flow control
+# Flow control
 
 Instead , use other line break strings like `***` or `___` ^[Referencing 1.]
 
@@ -97,7 +100,7 @@ Instead , use other line break strings like `***` or `___` ^[Referencing 1.]
 
 ***
 
-### Fragments
+## Fragments
 For a text:  
 
 ::: {.fragment }
@@ -129,114 +132,34 @@ $$
 $$
 Use `\class{fragment}{ ... }` , but ordering appearance here is impossible 
 
+## Increment(al)
 
-## Citations 
-Citation with footnotes ^[Referencing 1.] via:  
+automatic .fragment 
 
-::: aside
-pre-footer eg. citation with `:aside:`, above `^[]` citations:
-:::
-
-
-## Python embed
-:::: {.columns}
-
-::: {.column width="60%" style="font-size: 80%;"}
 ::: {.incremental}
-Render code with "{.code}" eg. `{.python}`
-
-- Highlight lines `code-line-numbers=`, *no spaces!*
-- Incremental highlights with `|` separation
-- Leave the entire block highlighted with `|` at start
-- eg. `{.python code-line-numbers="7,9|10"}`
-
-```{.python .code-overflow-wrap .smaller code-line-numbers="|7,9|10" }
-#| label: fig-1
-#| fig-cap: "Demo plot name"
-#| echo: true
-#| output-location: column
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-r = np.arange(0, 2, 0.01)
-theta = 2 * np.pi * r
-fig, ax = plt.subplots(  subplot_kw = {'projection': 'polar'} )
-ax.plot(theta, r);ax.set_rticks([0.5, 1, 1.5, 2]); ax.grid(True) ; plt.show()
-```
-tagalong css styles with `style="key:value;"`  
-code wrapping does not work (yet)
-
-
+- List items are auto 
+- incremented
 :::
 
-:::
 
-::: {.column width="40%" }
-```{python }
-#| label: fig-1
-#| fig-cap: "Demo plot name"
+{{< include sections/Citations.qmd >}}
 
-import numpy as np
-import matplotlib.pyplot as plt
-
-r = np.arange(0, 2, 0.01)
-theta = 2 * np.pi * r
-fig, ax = plt.subplots(  subplot_kw = {'projection': 'polar'} )
-ax.plot(theta, r);ax.set_rticks([0.5, 1, 1.5, 2]); ax.grid(True) ; plt.show()
-```
-(see forced squashing)
-Code should be separate from source items, size adjustment & other formatting likely
-
-
-:::
-Or to dump the plot to next slide (no heading), use 
-```
-#| echo: true
-#| output-location: column
-```
-::::
+{{< include sections/PythonEmbed.qmd >}}
+{{< include sections/PythonLiteralEmbed.qmd >}}
 
 
 
-## Python embed 2 {style="font-size: 0.7em;"}
-
-To really echo true source,  use output options:
-
-- fragment
-- slide
-- column
-- column-fragment (just  a combi)
 
 
-```{python }
-#| label: fig-2
-#| fig-cap: "Source-echoed plot"
-#| echo: true
-#| output-location: column
 
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-r = np.arange(0, 2, 0.01)
-theta = 2 * np.pi * r
-fig, ax = plt.subplots(  subplot_kw = {'projection': 'polar'} 
-,figsize=(3,3)) # this for size 
-ax.plot(theta, r);
-ax.set_rticks([0.5, 1, 1.5, 2]); 
-ax.grid(True) ; plt.show()
-```
-
-## Python embed 3
-<!-- TODO -->
+# Python embed - external possibilities
 - [ ] ggplotly
 - [ ] 3D: https://github.com/bwlewis/rthreejs
 - [ ] webGL: http://cran.at.r-project.org/web/packages/rglwidget/index.html
 
-## Presenting anims
-- Zoom: Alt + Click (or Ctrl + Click on Linux)
-- Speaker view: press s
+## Controls  
+- Zoom: `Alt + Click` (or Ctrl + Click on Linux)
+- Speaker view: press `s`
 - Click the hamburger menu or press m 1
 - Black out: press b
 - Code anim: with `## {auto-animate=true}` between 2 codeblocks
@@ -255,39 +178,13 @@ TODO https://github.com/Martinomagnifico/quarto-simplemenu?tab=readme-ov-file
 ```  
 Subfiles **MUST** start with a `_`
 
-## Automation
-<!-- TODO -->
- 
-- [ ] Add blank slides: 
-  - [ ] parse largest file number: use max() in bash
-  - [ ] touch a qmd with max+1
-  - [ ] include that filename to clipboard
 
-## qmd basics (are different)
-
-::: {.incremental}
-- List items are auto 
-- incremented
-:::
-
-(BUG) List right after `:::` block will not work: Need a line of content before
-
-- Otherwise it will not newline  
-
-- Reddit--comment-style sparse for linebreak  
-  - And `\ \ ` for hard newline
+# qmd basics (are different)
 
 
+{{< include sections/Lists.qmd >}}
 
-or with 3 dots , like `. . .`
-
-. . . 
-
-Outside of `.incremental`, list items must have empty lines above `. . .  `
 
 https://quarto.org/docs/authoring/markdown-basics.html
 
-## Callout
-
-<!-- TODO  -->
 

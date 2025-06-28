@@ -1,0 +1,28 @@
+# Python embed 2 {style="font-size: 0.7em;"}
+
+To really echo true source,  use output options:
+
+- fragment
+- slide
+- column
+- column-fragment (just  a combi)
+
+
+```{python }
+#| label: fig-2
+#| fig-cap: "Source-echoed plot"
+#| echo: true
+#| output-location: column
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(  subplot_kw = {'projection': 'polar'} 
+,figsize=(3,3)) # this for size 
+ax.plot(theta, r);
+ax.set_rticks([0.5, 1, 1.5, 2]); 
+ax.grid(True) ; plt.show()
+```

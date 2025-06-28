@@ -1,0 +1,44 @@
+### 2 Columns 
+
+::: {.callout-tip icon=false title="Codeblock template: 2 Columns" } 
+
+```{.markdown}
+:::::: {.r-stack }
+
+:::: {.columns style="width: 100%;" .fragment}
+
+::: {.column width="50%"}
+Content left
+:::
+
+::: {.column width="50%" style="text-align:right" .fragment}
+Content right
+:::
+
+:::: 
+
+::::::
+```
+
+---
+
+Results in 
+
+:::::: {.r-stack }
+
+:::: {.columns style="width: 100%;" .fragment}
+
+::: {.column width="50%"}
+Content left
+:::
+
+::: {.column width="50%" style="text-align:right" .fragment}
+Content right
+:::
+
+:::: 
+
+::::::
+
+
+:::
