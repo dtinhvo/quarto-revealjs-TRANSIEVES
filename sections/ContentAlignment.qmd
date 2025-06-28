@@ -1,21 +1,29 @@
-## Content alignment
+# Content alignment
 
 To manual line break, `\n` will not work -> use `<br>`
 <!-- TODO <br> -->
 
+## Centering 
 
 ::: {style="text-align:center"}
 Centering : There is only one option known to work, `style="text-align:center"`. Put this into delimiters
 <!-- TODO  -->
 
 In fact, anything to be centered can enter a centered generic block, including images  
-Codeblock template for centered block:
-```
+
+:::
+
+
+::: {.callout-tip icon=false title="Codeblock template: centered block (of anything)" } 
+
+```{.markdown}
 ::: {.block style="text-align:center"}
 :::
 ```
+
 :::
 
+## Overlaying
 
 ::: {.r-stack}
 ::: {.fragment}
@@ -26,14 +34,77 @@ See how it works? {.fragment}
 :::
 ::: 
 
+`r-stack` behaviour: 
+- `.fragment` implicitly splits into blocks not marked with .fragment to group with ones above. see #### 3 Columns  
+
 ***
 
-- To use with `.columns`, care is needed: 
-    - force full width for columns
-    - properly .block other contents
+## Columns 
 
-```
+- To use with `.columns`, care is needed: 
+    - force full width for columns `style="width: 100%;"`
+    - properly .block other contents `::: {.block}`
+    - only split col inside `::: {.column}   :::` 
+    - Collumn size with `width=` 
+      - WARNING! `style="width: 40%"` is NOT correct!
+
+
+---
+
+### 2 Columns 
+
+::: {.callout-tip icon=false title="Codeblock template: 2 Columns" } 
+
+```{.markdown}
 :::::: {.r-stack }
+
+:::: {.columns style="width: 100%;" .fragment}
+
+::: {.column width="50%"}
+Content left
+:::
+
+::: {.column width="50%" style="text-align:right" .fragment}
+Content right
+:::
+
+:::: 
+
+::::::
+```
+
+---
+
+Results in 
+
+:::::: {.r-stack }
+
+:::: {.columns style="width: 100%;" .fragment}
+
+::: {.column width="50%"}
+Content left
+:::
+
+::: {.column width="50%" style="text-align:right" .fragment}
+Content right
+:::
+
+:::: 
+
+::::::
+
+
+:::
+
+---
+
+### 3 Columns
+
+::: {.callout-tip icon=false title="Codeblock template: 3 Columns" } 
+
+```{.markdown}
+:::::: {.r-stack }
+
 
 :::: {.columns style="width: 100%;" .fragment}
 
@@ -54,6 +125,31 @@ Content after
 ::::::
 ```
 
-For images, use `fig-align="center"`
+---
+
+Results in 
+
+:::::: {.r-stack }
+
+
+
+:::: {.columns style="width: 100%;" .fragment}
+
+::: {.column width="50%"}
+Content left
+:::
+
+::: {.column width="50%" style="text-align:right"}
+Content right
+:::
+
+:::: 
+
+:::: {.block .fragment}
+Content after
+::::
+::::::
+
+:::
 
 

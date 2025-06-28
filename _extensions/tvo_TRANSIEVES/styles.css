@@ -1,3 +1,4 @@
+/* trying to center text */
 .center-text {
   display: flex;
   justify-content: center;
@@ -13,3 +14,16 @@
   pointer-events: none;
   width: 200px;
 } /* tbd test */
+
+/* ------------------------------------------ */
+/* page break */
+
+.reveal div.callout-body div.callout-content hr {
+  border: none !important;
+  height: 100px !important;
+  background-color: #ddd !important;
+  margin: 1rem 0 !important;
+}
+
+/* ------------------------------------------ */
+/* header that stays {.persistent-header} TBD does not work yet*/

@@ -1,0 +1,70 @@
+# Photo management {.scrollable}
+
+::: {.callout-tip icon=false title="Codeblock template: Image" } 
+
+```{.markdown}
+![Caption](/@Medias/me.jpg){width="2in" style="text-align:center"}
+```
+---
+results in 
+
+![Caption](/@Medias/me.jpg){width="2in" style="text-align:center"}
+
+:::
+
+- [ ] [layout / positioning](https://quarto.org/docs/presentations/revealjs/advanced.html#absolute-position): 
+  - Positioning : a verbose example  
+    `{.absolute top=200 left=0 width="350" height="300"}`, vice versa
+  - Best pratice: put into columns
+- [Overlaying](https://quarto.org/docs/presentations/revealjs/advanced.html#stack-layout)
+  - ::: {.callout-tip icon=false title="Codeblock template: Overlaid image, 1 step" } 
+    ```{.markdown}
+    ::: {.r-stack}
+    Overlaid text
+    :::: {.fragment}
+    ![Caption](/@Medias/me.jpg){width="2in" style="text-align:center"}
+    ::::
+    :::
+    ```
+    ---
+    results in 
+
+
+    ::: {.r-stack}
+
+    Overlaid text
+
+    :::: {.fragment}
+    ![Caption](/@Medias/me.jpg){width="2in" style="text-align:center"}
+    ::::
+    
+    :::
+    
+    :::
+  - ::: {.callout-tip icon=false title="Codeblock template: Overlaid image, 2 steps" } 
+    ```{.markdown}
+    ::: {.r-stack}
+    :::: {.fragment}
+    {Overlaid text}
+    ::::
+    :::: {.fragment}
+    ![Caption](/@Medias/me.jpg){width="2in" style="text-align:center"}
+    ::::
+    :::
+    ```
+    ---
+    results in 
+
+    ::: {.r-stack}
+    :::: {.fragment}
+    {Overlaid text}
+    ::::
+    :::: {.fragment}
+    ![Caption](/@Medias/me.jpg){width="2in" style="text-align:center"}
+    ::::
+    :::
+    
+    :::
+
+## Alignment 
+- Centering : `fig-align="center"`

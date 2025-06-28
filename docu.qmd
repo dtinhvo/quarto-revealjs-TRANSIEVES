@@ -12,22 +12,36 @@ format:
     title-slide: false
   revealjs: 
     css: tvo_TRANSIEVES/styles.css
-    include-in-header: persistent-header/persistent-header.html
+    include-in-header: persistent-header/persistent-header.html # currently have no effect
     title-slide: false
-# filters: 
-  # - reveal-header
+    callout-icon: false
+    callout:  
+      noicon:
+        icon: false
+filters: 
+  - reveal-header
 slide-level: 2 #
 number-sections: false
 
 ---
 
 <!-- TODO file watching sometimes need a manual reset if file is mangled -->
+<!-- TODO needs to watch also sections/ -->
+<!-- TODO!! Make styling of h1 and reveal-header the same -->
+
+
+::: {.callout-tip icon=false title="Codeblock template: TBD" } 
+
+```{.markdown}
+```
+
+:::
+
 
 # Sample section, in reality this would be Background or Motivation
 
 ## Incremental slides , also let's say that this section is really long so that the next h3 will include it all for sizing
 
-.{large} Search for "Codeblock template"
 
 (extended syntax for qmd is at the end)
 
@@ -38,61 +52,12 @@ number-sections: false
 This is a check for persistent header: h2 should be on upper right  
 h3 is not considered as a header
 
-## Columns
-:::: {.columns}
 
-only split col inside `::: {.column}   :::` 
-
-Collumn size with `width=` - WARNING! `style="width: 40%"` is NOT correct!
-
-::: {.column  width="40%"}
-Left column
-:::
-
-::: {.column width="60%"}
-Right column
-:::
-
-::::
-
-Codeblock template for: Columns
-```
-:::: {.columns}
-
-::: {.column .col-border-right width="50%" style="font-size: 50%;"}
-:::
-
-::: {.column width="50%" style="font-size: 50%;"}
-:::
-
-::::
-``` 
 
 {{< include sections/ContentAlignment.qmd >}}
 
 
-## Photo management
-with `[Caption](/path/to/image.png)`
-
-<!-- TODO  -->
-- [ ] [layout / positioning](https://quarto.org/docs/presentations/revealjs/advanced.html#absolute-position): 
-  - Positioning : a verbose example  
-    `{.absolute top=200 left=0 width="350" height="300"}`, vice versa
-  - offset relative from usual position, instead of absoluting  
-- [Overlaying](https://quarto.org/docs/presentations/revealjs/advanced.html#stack-layout)
-  - `::: {.r-stack} ` into `![](image.png){.fragment}` <!-- I suppose overlay is just no fragment -->
-- Vertical stretch-to-fill
-  - Enable: `{.r-stretch}`
-  - Disable: `{.nostretch}`
-- change dir structure to source from one single ext file
-  - careful gitignore template
-  - cascading custom styles, local variable to each ppt
-- snippets
-  - br
-  - block
-  - style
-  - center
-  - fragment
+{{< include sections/PhotoManagement.qmd >}}
 
 
 
@@ -112,9 +77,11 @@ Applicable `{key}`s:
 ::: {.panel-tabset}
 
 ### Some useful properties
-`.scollable` scroll long code  
-`.fragment` delay display until next arrow cmd
-
+- `.scrollable` scroll long code  
+- `.fragment` delay display until next arrow cmd
+- `style="text-align:center"` to align center anything (text)
+- `.r-stretch` vertical stretch to fill (no wrapping) 
+  - Disable: `{.nostretch}`
 ### Some useless functionalities
 
 - Tabs : `::: {.panel-tabset} :::` , with ### being each tab
@@ -296,7 +263,7 @@ Subfiles **MUST** start with a `_`
   - [ ] touch a qmd with max+1
   - [ ] include that filename to clipboard
 
-## qmd basics are different
+## qmd basics (are different)
 
 ::: {.incremental}
 - List items are auto 
@@ -319,3 +286,8 @@ or with 3 dots , like `. . .`
 Outside of `.incremental`, list items must have empty lines above `. . .  `
 
 https://quarto.org/docs/authoring/markdown-basics.html
+
+## Callout
+
+<!-- TODO  -->
+
