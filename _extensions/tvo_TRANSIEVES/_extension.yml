@@ -1,6 +1,6 @@
 title: tvo_TRANSIEVES
-author: Shafayet Khan Shafee
-version: 1.2.8
+author: Tinh Vo
+version: 0.0.1
 quarto-required: ">=1.2.0"
 contributes:
   format:
@@ -12,7 +12,7 @@ contributes:
           slide-number: true
           preview-links: true
           progress: true
-          width: 2100
+          width: 2100 # somehow forcing resolution makes sizing plays nice
           height: 1080
           margin: 0.05
           self-contained: true

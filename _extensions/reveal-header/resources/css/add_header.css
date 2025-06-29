@@ -37,6 +37,8 @@
   text-align: left;
   margin: var(--header-margin);
 }
+
+/* TODO h1 and h2 should get right limiters */
 /* h1 */
 .reveal-header .sc-title p { 
   color: var(--stanford-red);
@@ -47,8 +49,7 @@
   left: 1vw;
   margin-left: var(--h1-left-margin);
   font-size: var(--h1-font-size) ;
-  font-weight: 900 !important;
-
+  font-weight: 900 ;
 }
 /* h2 */
 .reveal-header .sb-title p { 
@@ -60,11 +61,9 @@
   top: calc(var(--h1-top-margin) + var( --h1-font-size ));
   left: 1vw;
   margin-left: var(--h2-left-margin);
-  margin-right: calc(var(--logo-right-margin) + var(--logo-right-width)) ;
 
   font-size: var(--h2-font-size);
-  font-weight: 700 !important;
-
+  font-weight: 700 ;
 }
 
 
