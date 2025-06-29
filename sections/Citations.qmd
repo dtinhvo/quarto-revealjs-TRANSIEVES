@@ -1,4 +1,5 @@
-# Citations 
+# Citations
+
 Citation with footnotes ^[1.] via:
 
 - ::: {.callout-tip icon=false title="Codeblock template: Citation / Footnote" } 

@@ -47,8 +47,11 @@ number-sections: false
 
 
 ## BUGs
+
   -  List right after `:::` block will not work: Need a line of content before
   -  (see more bugs in Lists)
+  -  best practice is to have **empty line after header **
+    -  lots of bugs otherwise
 
 (extended syntax for qmd is at the end)
 

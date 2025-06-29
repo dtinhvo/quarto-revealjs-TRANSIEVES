@@ -23,6 +23,7 @@ $subtitle-font: 'Source Sans 3', sans-serif;
 $stanford-red-1: #80221C; // Stanford red color variant
 $stanford-red-1a: #450b08; // 
 $stanford-red-1b: #952821; // 
+$stanford-red-1c: #1f0807; // 
 
 $stanford-subtitle-red: #961D24;
 $stanford-gray: #4D4F53; // Stanford gray color
@@ -113,9 +114,12 @@ $stanford-white: #FFFDFD; // Stanford white color
 
   h4 {
     font-family: $title-font;
-    font-size: 1.3em;
+    font-size: 1.2em;
     line-height: 1.5;
-    font-weight: 1300;
+
+    color: $stanford-red-1c;
+    
+    font-weight: 400;
     letter-spacing: 0.03em;
   }
 }
