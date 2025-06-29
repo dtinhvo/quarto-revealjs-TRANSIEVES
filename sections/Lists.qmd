@@ -5,7 +5,7 @@ Newline requirements are strict. Before anyblock needs a newline to break that b
 ***
 
 - List:
--   ::: {.callout-tip icon=false title="Codeblock template: Overlaid image, 2 steps" } 
+-   ::: {.callout-tip icon=false title="Codeblock template:New List" } 
     ```{.markdown}
 
     - TBD
@@ -14,13 +14,12 @@ Newline requirements are strict. Before anyblock needs a newline to break that b
 
 
 - List with callout :
--   ::: {.callout-tip icon=false title="Codeblock template: Overlaid image, 2 steps" } 
+-   ::: {.callout-tip icon=false title="Codeblock template:New List with callout" } 
     ```{.markdown}
     
-    - 
-    -   ::: {.callout-tip icon=false title="Codeblock template"}
-        TBD
-        :::
+    -  ::: {.callout-tip icon=false title="TBD"}
+       TBD
+       :::
     ``` 
     :::
 

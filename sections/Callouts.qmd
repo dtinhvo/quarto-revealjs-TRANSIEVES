@@ -1,0 +1,61 @@
+## Callouts {.scrollable}
+
+::: {.callout-warning icon=false title="Restrictions with list" } 
+- Must take a whole list item ie. \n
+  no before or after
+- `:::` indent must **EXACT** 
+:::
+
+::: {.callout-warning icon=false title="Built-in" } 
+- `{.callout-note}`
+- `{.callout-tip}`
+- `{.callout-caution}`
+- `{.callout-warning}`
+- `{.callout-important}`
+:::
+
+-   ::: {.callout-tip icon=false title="Standard callout" } 
+    
+    ```{.markdown}
+        ::: {.callout-tip icon=false title="TBD" } 
+        
+        :::
+    ```
+    :::
+
+-   ::: {.callout-tip icon=false title="Codeblock template:new list item with Callout" } 
+    
+    ```{.markdown}
+    -  ::: {.callout-tip icon=false title="TBD"}
+    TBD
+    :::
+    ``` 
+    :::
+-   ::: {.callout-tip icon=false title="Callout with code block inside" } 
+
+    ::: {.callout-caution icon=false title="" } 
+    \` Must be on the exact indent as `:::`
+    :::  
+
+    ```{.markdown}
+        ::: {.callout-tip icon=false title="Standard callout" } 
+        
+        ```{.markdown}
+            ::: {.callout-tip icon=false title="TBD" } 
+            
+            :::
+        ```
+        :::
+    ```
+    
+    :::
+
+-   ::: {.callout-tip icon=false title="Callout with Callout inside" } 
+
+    ```{.markdown}
+        ::: {.callout-caution icon=false title="" } 
+        :::  
+    ```    
+    
+
+    :::

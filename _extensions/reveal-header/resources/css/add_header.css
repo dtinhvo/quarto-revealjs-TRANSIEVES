@@ -2,46 +2,78 @@
 
 
 :root {
-  --header-font-size: max(10px, 1.4vw);
-  --header-font-color: #898E8B;
+  --h1-font-size: 2vw;
+  --h2-font-size: 1.5vw;
+
+  --h1-top-margin: 5px;
+
+  --h1-left-margin:0.5vw;
+  --h2-left-margin:0.75vw;
+
+
+  --header-font-color: #80221C;
   --header-margin: 0px 0px 0px 0px;
   --stanford-red: #80221C;
+  --stanford-red-1a: #450b08; // 
+  
   --stanford-white: #FFFDFD;
-  /*--header-font-family: 'Source Serif 4', serif;*/
+  --header-font-family:  "Fira Sans", "Roboto", "Droid Serif", serif;
+
+  --logo-right-margin: 18px;
+  --logo-right-width: 180px;
+
 }
 
 .reveal .reveal-header {
   top: 0;
-  margin: 3.2px 0px 2px 0px;
+  margin: 0px 0px 2px 0px;
   width: 100%;
   position: fixed;
   z-index: 5;
-  /*font-family: var(--header-font-family);*/
+  font-family: var(--header-font-family);
 }
 
 .reveal .reveal-header p {
-  color: var(--header-font-color);
   text-align: left;
   margin: var(--header-margin);
-  font-size: var(--header-font-size);
 }
-.reveal-header .sc-title p { float: left;position: absolute; top: 0.5vw; margin-left: 0.5vw}
+/* h1 */
+.reveal-header .sc-title p { 
+  color: var(--stanford-red);
+
+  float: left;
+  position: absolute;
+  top: var(--h1-top-margin);
+  left: 1vw;
+  margin-left: var(--h1-left-margin);
+  font-size: var(--h1-font-size) ;
+  font-weight: 900 !important;
+
+}
+/* h2 */
 .reveal-header .sb-title p { 
-  float: right; 
-  font-size: var(--header-font-size);
-  text-align: right;
-  position: absolute; top: 0.5vw;
-  margin-right: 220px
+  color: var(--stanford-red-1a);
+
+  float: left !important; 
+  text-align: left;
+  position: absolute; 
+  top: calc(var(--h1-top-margin) + var( --h1-font-size ));
+  left: 1vw;
+  margin-left: var(--h2-left-margin);
+  margin-right: calc(var(--logo-right-margin) + var(--logo-right-width)) ;
+
+  font-size: var(--h2-font-size);
+  font-weight: 700 !important;
+
 }
 
 
 .reveal-header .sc-title p,
 .reveal-header .sb-title p {
-  font-size: max(10px, 1.45vw);
-  filter: brightness(0.85);
+  filter: brightness(0.95);
 }
 
-.reveal-header.no-logo .sc-title p {margin-left: 6vw}
+.reveal-header.no-logo .sc-title p {margin-left: 2vw}
 
 
 .reveal .header-logo svg,
@@ -51,13 +83,13 @@
   padding-top: 0px;
   position: absolute;
   bottom: unset !important;
-  right: 18px !important;
+  right: var(--logo-right-margin) !important;
   top: 100px !important; 
   left: unset !important;
   /* height: 100px ; */
   height: unset;
   width: unset;
-  max-width: 180px !important;
+  max-width: var(--logo-right-width) !important;
   max-height: unset !important;
   border: 0px;
 }

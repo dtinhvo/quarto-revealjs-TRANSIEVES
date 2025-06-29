@@ -16,7 +16,7 @@ format:
     title-slide: false
 filters: 
   - reveal-header
-slide-level: 2 #
+slide-level: 3 # affects reveal-header persistence
 number-sections: false
 
 ---
@@ -34,24 +34,24 @@ number-sections: false
 
 :::
 
-- BUGs
+
+
+::: {.callout-tip icon=false title="Codeblock template: TBD with callout in" } 
+
+```{.markdown}
+  :::  {.callout-tip icon=false title="TBD" } 
+  :::
+```
+
+:::
+
+
+## BUGs
   -  List right after `:::` block will not work: Need a line of content before
-  -  
+  -  (see more bugs in Lists)
 
 (extended syntax for qmd is at the end)
 
-# Sample section
-
-## Incremental slides , also let's say that this section is really long so that the next h3 will include it all for sizing
-
-(this is to test reveal-header)
-
-
-
-### Subsubsection
-
-This is a check for persistent header: h2 should be on upper right  
-h3 is not considered as a header
 
 
 
@@ -67,14 +67,12 @@ h3 is not considered as a header
 
 # Formatting 
 
-Apply into `{style="key:value;"}` or `.smaller`  
-Applicable `{key}`s:
-<!-- TODO  -->
+- Apply like `{style="key:value;"}` 
+  - or `.smaller`  
+- Applicable `{key}`s:
+    - `font-size: {#}%;` 
 
-    - font-size: {#}%; // This is parsed as pseudo code - commonmark issue
-
-
-
+<!-- i dont liek tabset, so no template -->
 ::: {.panel-tabset}
 
 ### Some useful properties
@@ -87,59 +85,22 @@ Applicable `{key}`s:
 ### Some useless functionalities
 
 - Tabs : `::: {.panel-tabset} :::` , with `###` being each tab
+  - this is also quite dangerous with header level
 
 :::
 
 # Flow control
 
-Instead , use other line break strings like `***` or `___` ^[Referencing 1.]
-
-::: aside
-*WARNING!* using line break `---` to force new slide will confuse yaml header -> unsafe
+::: {.callout-warning icon=false title="*WARNING!*" } 
+using line break `---` to force new slide will confuse yaml header -> unsafe
 :::
+
+
+Instead , use other line break strings like `***` or `___`
 
 ***
 
-## Fragments
-For a text:  
-
-::: {.fragment }
-Normal fragment are its own line/block , wrapped in `.fragment`
-:::
-
-
-:::: {.inline-fragment}
-But if you want to do it inline, 
-
-::: {.fragment fragment-index=3}
-use `:::: {.inline-fragment}` (4x:) *in addition*, wrapping the block. 
-:::
-::: {.fragment .smaller fragment-index=2}
-this was hacked with css 
-:::
-:::: 
-
-For irregular order, add `fragment-index=`
-
-::: {.fragment }
-indexed fragments will show first by defaul ie. cannot intercept ordering implicitly
-:::
-
-For an equation: 
-$$
-  x =
-\class{fragment}{{} x(x+1) + 1(x+1)}
-$$
-Use `\class{fragment}{ ... }` , but ordering appearance here is impossible 
-
-## Increment(al)
-
-automatic .fragment 
-
-::: {.incremental}
-- List items are auto 
-- incremented
-:::
+{{< include sections/IncrementalFragments.qmd >}}
 
 
 {{< include sections/Citations.qmd >}}
@@ -157,26 +118,26 @@ automatic .fragment
 - [ ] 3D: https://github.com/bwlewis/rthreejs
 - [ ] webGL: http://cran.at.r-project.org/web/packages/rglwidget/index.html
 
-## Controls  
-- Zoom: `Alt + Click` (or Ctrl + Click on Linux)
-- Speaker view: press `s`
-- Click the hamburger menu or press m 1
-- Black out: press b
-- Code anim: with `## {auto-animate=true}` between 2 codeblocks
 
-## Menu for chapters
-TODO https://github.com/Martinomagnifico/quarto-simplemenu?tab=readme-ov-file
 
-## Separating slides
-<!-- TODO main file scheme ala. main.qmd? or chapters go to ./_chapters/_#.qmd, and include via {{< myname >}} -->
-<!-- Commented out bc code can be embedded as include -->
 
-```
 
-<!-- {{< include /path/to/_file.qmd >}} -->
 
-```  
-Subfiles **MUST** start with a `_`
+
+
+# Demonstrating persistent header
+Is a global switch. Individual persistence currently impossible
+
+## Incremental slides , also let's say that this section is really long so that the next h3 will include it all for sizing
+
+(this is to test reveal-header)
+
+***
+
+### Subsubsection
+
+This is a check for persistent header: h2 is included
+h3 will not be included in header persistence -> needs to be numbered and retyped
 
 
 # qmd basics (are different)
@@ -184,7 +145,24 @@ Subfiles **MUST** start with a `_`
 
 {{< include sections/Lists.qmd >}}
 
+{{< include sections/Callouts.qmd >}}
 
-https://quarto.org/docs/authoring/markdown-basics.html
+## Menu for chapters
+TODO https://github.com/Martinomagnifico/quarto-simplemenu?tab=readme-ov-file
 
+## Controls  
+- Zoom: `Alt + Click` (or Ctrl + Click on Linux)
+- Speaker view: press `s`
+- Click the hamburger menu or press `m`
+- Black out: press b
+- Code anim: with `## {auto-animate=true}` between 2 codeblocks
 
+## Separating slides
+<!-- Commented out bc code can be embedded as include -->
+::: {.callout-tip icon=false title="Codeblock template: include chapters" } 
+
+```{.markdown}
+<!-- {{< include /path/to/_file.qmd >}} -->
+```
+
+:::

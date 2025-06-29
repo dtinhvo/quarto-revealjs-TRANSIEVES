@@ -20,7 +20,10 @@ $presentation-heading-font-weight: 400;
 $background-color: white;
 $title-font: 'Source Sans 3', sans-serif;
 $subtitle-font: 'Source Sans 3', sans-serif;
-$stanford-red: #80221C; // Stanford red color variant
+$stanford-red-1: #80221C; // Stanford red color variant
+$stanford-red-1a: #450b08; // 
+$stanford-red-1b: #952821; // 
+
 $stanford-subtitle-red: #961D24;
 $stanford-gray: #4D4F53; // Stanford gray color
 $stanford-description-gray: #595959;
@@ -35,7 +38,9 @@ $stanford-white: #FFFDFD; // Stanford white color
   // Title
   h1 {
     font-family: $title-font;
-    color: #000000;
+    color: $stanford-red-1;
+    text-shadow: none;
+
     text-transform: capitalize;
     // background:    linear-gradient(to top, $stanford-red 0%, $stanford-gray 25%);
   }
@@ -68,17 +73,49 @@ $stanford-white: #FFFDFD; // Stanford white color
 }
 
 .reveal .slides {
+  h1 {
+    text-transform: uppercase;
+
+    font-family: $title-font;
+    font-size: 2.5em;
+
+    color: $stanford-red-1;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+
+    font-weight: 900;
+  }
   h2 {
     font-family: $title-font;
-    color: $stanford-red;
+
+    font-size: 2.0em;
+    line-height: 1.3;
+    
+    color: $stanford-red-1a;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+    
+    font-weight: 700;
+    letter-spacing: 0.01em;
   }
 
   h3 {
-    font-size: 1.1em;
+    font-family: $title-font;
+
+    font-size: 1.5em;
+    line-height: 1.4; 
+
+    color: $stanford-red-1b;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+    
+    font-weight: 500;
+    letter-spacing: 0.02em;
   }
 
   h4 {
-    font-size: 0.9em;
+    font-family: $title-font;
+    font-size: 1.3em;
+    line-height: 1.5;
+    font-weight: 1300;
+    letter-spacing: 0.03em;
   }
 }
 
@@ -87,6 +124,7 @@ $presentation-title-slide-text-align: left;
 .reveal .slides{
   text-align: left;
   margin-top: 30px;
+  top: 25vw !important;
 }
 .center {
   vertical-align: top;
@@ -119,7 +157,7 @@ $presentation-title-slide-text-align: left;
 
 // Bottom bar
 .reveal div.footer {
-    background-color: $stanford-red;
+    background-color: $stanford-red-1;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
