@@ -101,7 +101,7 @@ function header() {
     if (document.querySelector('div.reveal.has-logo') != null) {
       // var slide_number = document.querySelector('div.slide-number');
       var header = document.querySelector("div.reveal-header");
-      header.appendChild(slide_number);
+      // header.appendChild(slide_number);
     };
   
     // Get the default header text element and innner HTML (i.e. literal text)
@@ -141,6 +141,20 @@ function header() {
       title_text.style.visibility = 'hidden';
       hide_from_title_slide(title_text);
     };
+
+    // hide if h1 has changed
+    Reveal.on( 'slidechanged', event => {
+      var h1_current = Reveal.getCurrentSlide().querySelector('h1');
+      var revealheader_text = document.querySelector('.reveal-header');
+      if (h1_current && revealheader_text && revealheader_text.textContent.trim() != h1_current.textContent.trim() ){
+        revealheader_text.style.visibility = 'hidden';
+      }
+      else
+      {
+        revealheader_text.style.visibility = 'visible';
+      }
+    });
+
     
     /*************** hide header text and logo on title slide ********************/
     
