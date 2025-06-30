@@ -1,0 +1,31 @@
+
+# Demonstrating persistent header
+Is a global switch. Individual persistence currently impossible
+
+## Incremental slides , also let's say that this section is really long so that the next h3 will include it all for sizing
+
+(this is to test reveal-header)
+
+***
+
+### Subsubsection
+
+This is a check for persistent header: h2 is included
+h3 will not be included in header persistence -> needs to be numbered and retyped
+
+## This h2 change should have dismissed the last one
+
+### h3 
+
+content..
+
+### h3,2
+
+content...
+
+***
+
+#### h4
+
+here we see a need for h3 persistence: h3 has to be manually retyped again!
+

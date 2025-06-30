@@ -6,6 +6,8 @@
   --h2-font-size: 1.5vw;
 
   --h1-top-margin: 5px;
+  --h2-top-margin: 5px;
+
 
   --h1-left-margin:0.5vw;
   --h2-left-margin:0.75vw;
@@ -58,7 +60,7 @@
   float: left !important; 
   text-align: left;
   position: absolute; 
-  top: calc(var(--h1-top-margin) + var( --h1-font-size ));
+  top: calc(var(--h1-top-margin) + var( --h1-font-size ) + var(--h2-top-margin));
   left: 1vw;
   margin-left: var(--h2-left-margin);
 

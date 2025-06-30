@@ -16,7 +16,7 @@ format:
     title-slide: false
 filters: 
   - reveal-header
-slide-level: 3 # affects reveal-header persistence
+slide-level: 4 # affects reveal-header persistence
 number-sections: false
 
 ---
@@ -24,6 +24,7 @@ number-sections: false
 <!-- TODO file watching sometimes need a manual reset if file is mangled -->
 <!-- TODO needs to watch also sections/ -->
 <!-- TODO!! Make styling of h1 and reveal-header the same -->
+<!-- TODO! h3 persistence ala h2 -->
 
 # Meta 
 
@@ -128,19 +129,8 @@ Instead , use other line break strings like `***` or `___`
 
 
 
-# Demonstrating persistent header
-Is a global switch. Individual persistence currently impossible
+{{< include sections/HeaderPersistence.qmd >}}
 
-## Incremental slides , also let's say that this section is really long so that the next h3 will include it all for sizing
-
-(this is to test reveal-header)
-
-***
-
-### Subsubsection
-
-This is a check for persistent header: h2 is included
-h3 will not be included in header persistence -> needs to be numbered and retyped
 
 
 # qmd basics (are different)
