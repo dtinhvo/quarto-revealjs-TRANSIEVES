@@ -23,8 +23,10 @@ results in
     Overlaid text
     :::: {.fragment}
     ![Caption](/@Medias/me.jpg){width="2in" style="text-align:center"}
-    ::::
-    :::
+    :::: 
+    <!-- overlay img -->
+    ::: 
+    <!-- text-img overlay block -->
     ```
     ---
     results in 
@@ -46,11 +48,14 @@ results in
     ::: {.r-stack}
     :::: {.fragment}
     {Overlaid text}
-    ::::
+    :::: 
+    <!-- text underneath -->
     :::: {.fragment}
     ![Caption](/@Medias/me.jpg){width="2in" style="text-align:center"}
-    ::::
-    :::
+    :::: 
+    <!-- overlay img -->
+    ::: 
+    <!-- text-img overlay block -->
     ```
     ---
     results in 

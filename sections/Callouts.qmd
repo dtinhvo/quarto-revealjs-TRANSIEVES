@@ -19,16 +19,16 @@
     ```{.markdown}
         ::: {.callout-tip icon=false title="TBD" } 
         
-        :::
+        ::: <!-- callout -->
     ```
     :::
 
 -   ::: {.callout-tip icon=false title="Codeblock template:new list item with Callout" } 
     
     ```{.markdown}
-    -  ::: {.callout-tip icon=false title="TBD"}
-    TBD
-    :::
+    - ::: {.callout-tip icon=false title="TBD"}
+      TBD
+      ::: <!-- callout -->
     ``` 
     :::
 -   ::: {.callout-tip icon=false title="Callout with code block inside" } 
@@ -38,24 +38,13 @@
     :::  
 
     ```{.markdown}
-        ::: {.callout-tip icon=false title="Standard callout" } 
-        
-        ```{.markdown}
-            ::: {.callout-tip icon=false title="TBD" } 
-            
-            :::
+    ::: {.callout-tip icon=false title="Standard callout" } 
+    
         ```
-        :::
+            
+        ```
+
+    ::: <!-- callout -->
     ```
     
-    :::
-
--   ::: {.callout-tip icon=false title="Callout with Callout inside" } 
-
-    ```{.markdown}
-        ::: {.callout-caution icon=false title="" } 
-        :::  
-    ```    
-    
-
     :::

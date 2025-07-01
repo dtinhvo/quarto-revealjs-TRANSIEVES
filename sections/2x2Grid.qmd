@@ -1,0 +1,79 @@
+## 2x2 Grid
+
+::: {.callout-tip icon=false title="Codeblock template: 3 Columns" } 
+
+```{.markdown}
+:::: {.columns style="width: 100%;"}
+
+::: {.column width="50%" .fragment fragment-index=1}
+
+TopLeft
+
+::: 
+<!-- left col -->
+
+
+::: {.column  width="50%" style="text-align:left" .fragment}
+
+TopRight
+
+::: 
+<!-- right col -->
+
+:::: 
+<!-- top cols -->
+
+
+:::: {.columns style="width: 100%;" .fragment}
+
+::: {.column width="50%"}
+BottomLeft
+::: 
+<!-- left col -->
+
+::: {.column width="50%" style="text-align:left" .fragment}
+BottomRight
+::: 
+<!-- right col -->
+
+:::: 
+<!-- bottom cols -->
+```
+
+---
+
+:::: {.columns style="width: 100%;"}
+
+::: {.column width="50%" .fragment fragment-index=1}
+
+TopLeft
+
+
+:::
+
+
+::: {.column width="50%" style="text-align:left" .fragment}
+
+TopRight
+
+:::
+
+::::
+
+<!-- page half -->
+
+:::: {.columns style="width: 100%;" .fragment}
+
+::: {.column width="50%"}
+BottomLeft
+:::
+
+::: {.column width="50%" style="text-align:left" .fragment}
+BottomRight
+:::
+
+:::: 
+
+<!-- DO NOT COPY AFTER HERE -->
+
+:::

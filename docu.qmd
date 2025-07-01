@@ -21,10 +21,13 @@ number-sections: false
 
 ---
 
+<!-- TODO!! dismiss ie. switch visibility of fragments -->
 <!-- TODO file watching sometimes need a manual reset if file is mangled -->
-<!-- TODO needs to watch also sections/ -->
-<!-- TODO!! Make styling of h1 and reveal-header the same -->
-<!-- TODO! h3 persistence ala h2 -->
+<!-- TODO TOC https://github.com/shafayetShafee/tableofcontents?tab=readme-ov-file -->
+
+<!-- FEAT speaker notes, not complicated, but controls? https://github.com/shafayetShafee/style-speaker-note?tab=readme-ov-file -->
+<!--  -->
+<!-- TODO h3 persistence ala h2 -->
 
 # Meta 
 
@@ -53,6 +56,7 @@ number-sections: false
   -  (see more bugs in Lists)
   -  best practice is to have **empty line after header **
     -  lots of bugs otherwise
+  - columns after list item is mega bugged???
 
 (extended syntax for qmd is at the end)
 
@@ -60,6 +64,8 @@ number-sections: false
 
 
 {{< include sections/ContentAlignment.qmd >}}
+
+{{< include sections/Columns.qmd >}}
 
 
 {{< include sections/PhotoManagement.qmd >}}

@@ -1,4 +1,4 @@
-### 3 Columns
+## 2 Columns + center overlay
 
 ::: {.callout-tip icon=false title="Codeblock template: 3 Columns" } 
 
@@ -10,19 +10,24 @@
 
 ::: {.column width="50%"}
 Content left
-:::
+::: 
+<!-- left col -->
 
 ::: {.column width="50%" style="text-align:right"}
 Content right
-:::
+::: 
+<!-- right col -->
 
 :::: 
+<!-- cols -->
 
-:::: {.block .fragment}
+::: {.block .fragment}
 Content after
-::::
+::: 
+<!-- middle overlay -->
 
-::::::
+:::::: 
+<!-- 3-cols block -->
 ```
 
 ---

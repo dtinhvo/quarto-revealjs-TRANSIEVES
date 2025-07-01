@@ -1,31 +1,28 @@
-### 2 Columns 
+## 2 Columns 
 
 ::: {.callout-tip icon=false title="Codeblock template: 2 Columns" } 
 
 ```{.markdown}
-:::::: {.r-stack }
-
 :::: {.columns style="width: 100%;" .fragment}
 
 ::: {.column width="50%"}
 Content left
-:::
+::: 
+<!-- left col -->
 
-::: {.column width="50%" style="text-align:right" .fragment}
+::: {.column width="50%" style="text-align:left" .fragment}
 Content right
-:::
+::: 
+<!-- right col -->
 
 :::: 
-
-::::::
+<!-- cols -->
 ```
 
 ---
 
 Results in 
 
-:::::: {.r-stack }
-
 :::: {.columns style="width: 100%;" .fragment}
 
 ::: {.column width="50%"}
@@ -38,7 +35,5 @@ Content right
 
 :::: 
 
-::::::
-
-
+<!-- DO NOT COPY AFTER HERE -->
 :::

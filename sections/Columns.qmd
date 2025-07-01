@@ -1,0 +1,20 @@
+# Columns 
+
+- To use with `.columns`, care is needed: 
+    - force full width for columns `style="width: 100%;"`
+    - properly .block other contents `::: {.block}`
+    - only split col inside `::: {.column}   :::` 
+    - Collumn size with `width=` 
+      - WARNING! `style="width: 40%"` is NOT correct!
+
+
+{{< include sections/2Columns.qmd >}}
+
+
+{{< include sections/3Columns.qmd >}}
+
+{{< include sections/2x2Grid.qmd >}}
+
+{{< include sections/ColumnPhotoIntegration.qmd >}}
+
+

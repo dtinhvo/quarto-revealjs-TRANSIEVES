@@ -1,0 +1,99 @@
+## Column-Photo integration {.scrollable}
+
+- To keep generality , instead of a permutation of photo inclusion for each column:
+  - assume that there is any column
+  - wrap _overlay_ of photo around it
+
+
+
+```{.markdown}
+::: {.column  ...}
+
+content
+
+::: 
+<!-- col -->
+```
+
+add `:::::: {.r-stack }` above
+
+
+:::: {.columns style="width: 100%;" }
+
+::: {.column width="50%"}
+- add after to make TBD aligned photo block:
+  ```{.markdown}
+  ::: {.block style="text-align:right"}
+  ![Caption](/@Medias/me.jpg){width="2in" style="text-align:center"}
+  ::: 
+  <!-- img overlay -->
+
+  :::::: 
+  <!-- col++ -->
+
+  ```
+
+::: 
+<!-- left col -->
+
+::: {.column width="50%" style="text-align:left" }
+- add after to make column split:
+  ```{.markdown}
+  ::: {.column width="50%" style="text-align:right"}
+  ![Caption](/@Medias/me.jpg){width="2in" style="text-align:center"}
+  ::: 
+  <!-- img overlay -->
+
+  :::::: 
+  <!-- col++ -->
+
+  ```
+::: 
+<!-- right col -->
+
+:::: 
+<!-- cols -->
+
+<br>
+
+test for block: 
+
+:::: {.columns style="width: 100%;"}
+
+:::::: {.r-stack }
+
+::: {.column  width="50%"}
+
+content
+
+::: 
+
+
+::: {.block style="text-align:right"}
+![Caption](/@Medias/me.jpg){width="2in" style="text-align:center"}
+::: 
+
+:::::: 
+
+:::: 
+
+test for column split: 
+
+:::: {.columns style="width: 100%;"}
+
+:::::: {.r-stack }
+
+::: {.column  width="50%"}
+
+content
+
+::: 
+
+
+::: {.column width="50%" style="text-align:right"}
+![Caption](/@Medias/me.jpg){width="2in" style="text-align:center"}
+::: 
+
+:::::: 
+
+:::: 
