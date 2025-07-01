@@ -58,9 +58,10 @@ add `:::::: {.r-stack }` above
 
 test for block: 
 
+:::::: {.r-stack }
+
 :::: {.columns style="width: 100%;"}
 
-:::::: {.r-stack }
 
 ::: {.column  width="50%"}
 
@@ -73,15 +74,16 @@ content
 ![Caption](/@Medias/me.jpg){width="2in" style="text-align:center"}
 ::: 
 
-:::::: 
-
 :::: 
+
+:::::: 
 
 test for column split: 
 
+:::::: {.r-stack }
+
 :::: {.columns style="width: 100%;"}
 
-:::::: {.r-stack }
 
 ::: {.column  width="50%"}
 
@@ -94,6 +96,7 @@ content
 ![Caption](/@Medias/me.jpg){width="2in" style="text-align:center"}
 ::: 
 
-:::::: 
 
 :::: 
+
+:::::: 
