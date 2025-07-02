@@ -24,6 +24,7 @@ number-sections: false
 <!-- TODO!! dismiss ie. switch visibility of fragments -->
 <!-- TODO file watching sometimes need a manual reset if file is mangled -->
 <!-- TODO TOC https://github.com/shafayetShafee/tableofcontents?tab=readme-ov-file -->
+<!-- TODO fitting image to the remaining space of a page needs work -->
 
 <!-- FEAT speaker notes, not complicated, but controls? https://github.com/shafayetShafee/style-speaker-note?tab=readme-ov-file -->
 <!--  -->
