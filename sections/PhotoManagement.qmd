@@ -18,56 +18,81 @@ results in
   - Best pratice: put into columns
 - [Overlaying](https://quarto.org/docs/presentations/revealjs/advanced.html#stack-layout)
   - ::: {.callout-tip icon=false title="Codeblock template: Overlaid image, 1 step" } 
+    
     ```{.markdown}
-    ::: {.r-stack}
+    
+    :::: {.r-stack}
+    
     Overlaid text
-    :::: {.fragment}
+    
+    ::: {.fragment}
+    
     ![Caption](/@Medias/me.jpg){width="2in" style="text-align:center"}
-    :::: 
-    <!-- overlay img -->
+    
     ::: 
+    <!-- overlay img -->
+    
+    :::: 
     <!-- text-img overlay block -->
     ```
     ---
     results in 
 
 
-    ::: {.r-stack}
+    :::: {.r-stack}
 
     Overlaid text
 
-    :::: {.fragment}
+    ::: {.fragment}
+    
     ![Caption](/@Medias/me.jpg){width="2in" style="text-align:center"}
+    
+    :::
+    
     ::::
     
     :::
-    
-    :::
+
   - ::: {.callout-tip icon=false title="Codeblock template: Overlaid image, 2 steps" } 
     ```{.markdown}
-    ::: {.r-stack}
-    :::: {.fragment}
+    
+    :::: {.r-stack}
+    
+    ::: {.fragment}
+    
     {Overlaid text}
-    :::: 
+    
+    ::: 
     <!-- text underneath -->
-    :::: {.fragment}
+    
+    ::: {.fragment}
+    
     ![Caption](/@Medias/me.jpg){width="2in" style="text-align:center"}
-    :::: 
+    
+    ::: 
     <!-- overlay img -->
+    
     ::: 
     <!-- text-img overlay block -->
     ```
     ---
     results in 
 
-    ::: {.r-stack}
-    :::: {.fragment}
+    :::: {.r-stack}
+    
+    ::: {.fragment}
+    
     {Overlaid text}
-    ::::
-    :::: {.fragment}
-    ![Caption](/@Medias/me.jpg){width="2in" style="text-align:center"}
-    ::::
+    
     :::
+    
+    ::: {.fragment}
+    
+    ![Caption](/@Medias/me.jpg){width="2in" style="text-align:center"}
+    
+    :::
+    
+    ::::
     
     :::
 

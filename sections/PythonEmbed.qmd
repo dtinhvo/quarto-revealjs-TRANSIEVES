@@ -1,7 +1,8 @@
 # Python embed
-:::: {.columns}
+::::: {.columns}
 
-::: {.column width="60%" style="font-size: 80%;"}
+:::: {.column width="60%" style="font-size: 80%;"}
+
 ::: {.incremental}
 Render code with "{.code}" eg. `{.python}`
 
@@ -30,9 +31,9 @@ code wrapping does not work (yet)
 
 :::
 
-:::
+::::
 
-::: {.column width="40%" }
+:::: {.column width="40%" }
 ```{python }
 #| label: fig-1
 #| fig-cap: "Demo plot name"
@@ -55,4 +56,4 @@ Or to dump the plot to next slide (no heading), use
 #| echo: true
 #| output-location: column
 ```
-::::
+:::::

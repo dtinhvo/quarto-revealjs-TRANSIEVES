@@ -2,25 +2,36 @@
 For a text:  
 
 ::: {.fragment }
+
 Normal fragment are its own line/block , wrapped in `.fragment`
+
 :::
 
 
 :::: {.inline-fragment}
+
 But if you want to do it inline, 
 
 ::: {.fragment fragment-index=3}
+
 use `:::: {.inline-fragment}` (4x:) *in addition*, wrapping the block. 
+
 :::
+
 ::: {.fragment .smaller fragment-index=2}
+
 this was hacked with css 
+
 :::
+
 :::: 
 
 For irregular order, add `fragment-index=`
 
 ::: {.fragment }
+
 indexed fragments will show first by defaul ie. cannot intercept ordering implicitly
+
 :::
 
 For an equation: 
@@ -35,6 +46,8 @@ Use `\class{fragment}{ ... }` , but ordering appearance here is impossible
 automatic .fragment 
 
 ::: {.incremental}
+
 - List items are auto 
 - incremented
+
 :::

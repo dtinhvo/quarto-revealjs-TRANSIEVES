@@ -7,7 +7,7 @@
 
 
 ```{.markdown}
-::: {.column  ...}
+::: {.column}
 
 content
 
@@ -24,11 +24,13 @@ add `:::::: {.r-stack }` above
 - add after to make TBD aligned photo block:
   ```{.markdown}
   ::: {.block style="text-align:right"}
+  
   ![Caption](/@Medias/me.jpg){width="2in" style="text-align:center"}
+  
   ::: 
   <!-- img overlay -->
 
-  :::::: 
+  ::::::
   <!-- col++ -->
 
   ```
@@ -37,14 +39,17 @@ add `:::::: {.r-stack }` above
 <!-- left col -->
 
 ::: {.column width="50%" style="text-align:left" }
+
 - add after to make column split:
   ```{.markdown}
   ::: {.column width="50%" style="text-align:right"}
+
   ![Caption](/@Medias/me.jpg){width="2in" style="text-align:center"}
+  
   ::: 
   <!-- img overlay -->
 
-  :::::: 
+  ::::::
   <!-- col++ -->
 
   ```
@@ -62,7 +67,6 @@ test for block:
 
 :::: {.columns style="width: 100%;"}
 
-
 ::: {.column  width="50%"}
 
 content
@@ -71,7 +75,9 @@ content
 
 
 ::: {.block style="text-align:right"}
+
 ![Caption](/@Medias/me.jpg){width="2in" style="text-align:center"}
+
 ::: 
 
 :::: 
@@ -93,7 +99,9 @@ content
 
 
 ::: {.column width="50%" style="text-align:right"}
+
 ![Caption](/@Medias/me.jpg){width="2in" style="text-align:center"}
+
 ::: 
 
 

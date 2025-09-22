@@ -10,7 +10,7 @@
 TopLeft
 
 ::: 
-<!-- left col -->
+<!-- 1,1 col -->
 
 
 ::: {.column  width="50%" style="text-align:left" .fragment}
@@ -18,26 +18,30 @@ TopLeft
 TopRight
 
 ::: 
-<!-- right col -->
+<!-- 1,2 col -->
 
 :::: 
-<!-- top cols -->
+<!-- 1 cols -->
 
 
 :::: {.columns style="width: 100%;" .fragment}
 
 ::: {.column width="50%"}
+
 BottomLeft
+
 ::: 
-<!-- left col -->
+<!-- 2,1 col -->
 
 ::: {.column width="50%" style="text-align:left" .fragment}
+
 BottomRight
+
 ::: 
-<!-- right col -->
+<!-- 2,2 col -->
 
 :::: 
-<!-- bottom cols -->
+<!-- 2 cols -->
 ```
 
 ---
@@ -48,9 +52,7 @@ BottomRight
 
 TopLeft
 
-
 :::
-
 
 ::: {.column width="50%" style="text-align:left" .fragment}
 
@@ -65,11 +67,15 @@ TopRight
 :::: {.columns style="width: 100%;" .fragment}
 
 ::: {.column width="50%"}
+
 BottomLeft
+
 :::
 
 ::: {.column width="50%" style="text-align:left" .fragment}
+
 BottomRight
+
 :::
 
 :::: 

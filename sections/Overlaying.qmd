@@ -1,13 +1,20 @@
 ## Overlaying
 
-::: {.r-stack}
+:::: {.r-stack}
+
 ::: {.fragment}
+
 You can stack stuff on top of each other (any block) with the `.r-stack` property 
+
 :::
+
 ::: {.fragment}
+
 See how it works? {.fragment}
+
 :::
-::: 
+
+:::: 
 
 `.r-stack` behaviour: 
 

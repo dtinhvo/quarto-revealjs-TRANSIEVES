@@ -5,11 +5,14 @@ Citation with footnotes ^[1.] via:
 - ::: {.callout-tip icon=false title="Codeblock template: Citation / Footnote" } 
   ```{.markdown}
     ::: aside
+    
     [1] TBD
+    
     :::
   ```
 
   :::
+
 - ::: {.callout-tip icon=false title="Codeblock template: *inline* Citation " } 
   ```{.markdown}
     ^[TBD 2.]
@@ -18,5 +21,7 @@ Citation with footnotes ^[1.] via:
   :::
 
 ::: aside
+
 [1] TBD
+
 :::
