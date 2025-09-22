@@ -98,9 +98,9 @@ function header() {
     };
     /****************************** END ***************************************/
     
+    var header = document.querySelector("div.reveal-header");
     if (document.querySelector('div.reveal.has-logo') != null) {
       // var slide_number = document.querySelector('div.slide-number');
-      var header = document.querySelector("div.reveal-header");
       // header.appendChild(slide_number);
     };
   
@@ -167,8 +167,8 @@ function header() {
     }
     
     if (hide_header_logo == 'true') {
-      logo_img.style.visibility = 'hidden';
-      hide_from_title_slide(logo_img);
+      // logo_img.style.visibility = 'hidden';
+      // hide_from_title_slide(logo_img);
     } 
     
   }; 

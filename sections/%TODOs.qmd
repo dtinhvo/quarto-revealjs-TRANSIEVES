@@ -1,0 +1,76 @@
+<!-- plugins: https://gitlab1.ptb.de/saturn02/ptb-quarto-revealjs-theme/-/tree/main/presentation_files/libs/revealjs/plugin -->
+<!-- crazy css: https://gitlab1.ptb.de/saturn02/ptb-quarto-revealjs-theme/-/blob/main/presentation_files/libs/revealjs/dist/reveal.css -->
+<!-- TODO! add different ::::::::::::::::::::::::: levels to templates -->
+<!-- TODO DOC comments above blocks -->
+
+<!-- FEAT!! stack image template -->
+<!-- :::{.r-stack}
+    ::::{.block .fragment .fade-out}
+    ![1](@Medias/TBD.png)
+    ::::
+
+    ::::{.block .fragment .fade-in-fade-out}
+    ![2](@Medias/2.png)
+    ::::
+    ::: -->
+
+<!-- fix title and comments for 2x2 col codeblock -->
+
+<!-- columns widthshould only be fixed by 1 left col -->
+
+
+<!-- TODO disabling max width if w or l is set -->
+<!-- FEAT hard wtf is this 
+    document.addEventListener('DOMContentLoaded', function() {
+      // Find all images within reveal slides
+      const images = document.querySelectorAll('.reveal img');
+
+      images.forEach(img => {
+        // Check if the inline style contains a 'width' property
+        // We use getPropertyValue for robustness, as img.style.width might return "" if not explicitly set inline
+        if (img.style.getPropertyValue('width')) {
+          // If a width is found, apply max-width: none !important;
+          // Using setProperty with !important
+          img.style.setProperty('max-width', 'none', 'important');
+        }
+      });
+    }); -->
+
+<!-- FEAT! make {style="font-size:150%"} into scss into cascading levels of .smaller1|smaller2|smaller3 and .larger1|larger2|larger3 -->
+<!--    should apply to heading,  EXCLUDE HEADING AND footer etc. -->
+<!--    why: multi columns in vert (needs quick styling?) -->
+
+<!-- TODO!! center vert align with manual: style="margin-top: 10%;" (flex is poison) -->
+
+<!-- BUG!! % height for images does not work -->
+
+<!-- DOC instead of *** newpage, you can put stuff in a ::: .fade-out  + rstack-->
+<!-- width needs to be put in styles, all! -->
+<!-- make new combined logo -->
+
+<!-- FEAT toc inserter: -->
+  <!-- https://stackoverflow.com/questions/60008898/pandoc-separate-table-of-contents-for-each-section -->
+  <!-- https://stackoverflow.com/questions/75024777/changing-on-which-slide-the-toc-appears-in-revealjs-slides-using-quarto -->
+
+<!-- TODO HARD:  col delim on scss -->
+<!--    start: https://gemini.google.com/app/16bb1c00d6245cf5 -->
+<!-- TODO!  patch ANY occurence of styles to a css selector . -->
+<!--    .center -->
+<!-- part fade out only on some elements, at specific points -->
+<!-- :::{.r-stack}
+
+    ::::{.block .fragment .fade-in-fade-out}
+
+    ![Ion concentration profiles resulting from a classical Nernst-Planck formulation solved numerically (left) ^[J. Fuhrmann, C. Guhlke, A. Linke, C. Merdon, and R. Müller, “Models and Numerical Methods for Electrolyte Flows,” CIM Series in Mathematical Sciences. Springer International Publishing, pp. 183–209, 2019. doi: 10.1007/978-3-030-33116-0_8. ]](@Medias/FuhrmannExpStern.png){height="4in"}
+
+    ::::
+
+    ::::{.block .fragment .fade-out}
+
+    ![Ionic sorption processes near walls ^[D. M. Kolb, “An atomistic view of electrochemistry,” Surface Science, vol. 500, no. 1–3. Elsevier BV, pp. 722–740, Mar. 2002. doi: 10.1016/s0039-6028(01)01583-7.] ](@Medias/SolvatedIon.png)
+
+    ::::
+
+    :::
+     -->
+

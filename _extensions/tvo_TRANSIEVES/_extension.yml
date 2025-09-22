@@ -6,15 +6,16 @@ contributes:
   format:
       revealjs:
           logo: resources/TU_Darmstadt_Logo.svg
-          header-logo: resources/TRANSIEVES.png
+          # header-logo: resources/TRANSIEVES.png
           # TODO csl: IEEE?.csl
           theme: TRANSIEVES.scss
+          css: styles.css
           slide-number: true
           preview-links: true
           progress: true
-          width: 2100 # somehow forcing resolution makes sizing plays nice
+          width: 1920 # adapting size to viewport not possible ??!? 
           height: 1080
-          margin: 0.05
+          margin: 0.1
           self-contained: true
           sc-sb-title: true
           title-slide-attributes: 

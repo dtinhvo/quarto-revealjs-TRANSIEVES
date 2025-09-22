@@ -1,3 +1,14 @@
+:root {
+  --r-block-margin: 3px; 
+  --r-main-font-size: 40px;
+  --r-heading-margin: 0 0 4px 0;
+}
+.reveal .slide aside .aside-footnotes{
+  font-size: 15px;
+  bottom: 1.2em;
+  line-height: 1.0;
+}
+
 /* trying to center text */
 .center-text {
   display: flex;
@@ -5,15 +16,8 @@
 } /* doesnt work */
 
 
-.overlay-image {
-  position: absolute;
-  top: 100px; /* adjust as needed */
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
-  pointer-events: none;
-  width: 200px;
-} /* tbd test */
+/* fix page height not used? */
+
 
 /* ------------------------------------------ */
 /* page break */
@@ -25,5 +29,9 @@
   margin: 1rem 0 !important;
 }
 
+
+
+
 /* ------------------------------------------ */
 /* header that stays {.persistent-header} TBD does not work yet*/
+
