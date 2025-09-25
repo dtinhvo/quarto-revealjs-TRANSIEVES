@@ -2,6 +2,7 @@
 <!-- crazy css: https://gitlab1.ptb.de/saturn02/ptb-quarto-revealjs-theme/-/blob/main/presentation_files/libs/revealjs/dist/reveal.css -->
 <!-- TODO! add different ::::::::::::::::::::::::: levels to templates -->
 <!-- TODO DOC comments above blocks -->
+<!-- FEAT! hard: make js properties injectors, starting with .center https://claude.ai/chat/3820407b-8bc2-4dd7-b6ad-cbd07f4f1382-->
 
 <!-- FEAT!! stack image template -->
 <!-- :::{.r-stack}
