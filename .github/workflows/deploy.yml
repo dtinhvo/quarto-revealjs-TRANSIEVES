@@ -40,7 +40,7 @@ jobs:
       - name: Render Quarto Project
         shell: bash
         run: |
-          quarto render docu.qmd --to tvo_TRANSIEVES-revealjs --output index.html --output-dir _site
+          quarto render *.qmd --to tvo_TRANSIEVES-revealjs --output index.html --output-dir _site
 
       
       - uses: actions/configure-pages@v5
