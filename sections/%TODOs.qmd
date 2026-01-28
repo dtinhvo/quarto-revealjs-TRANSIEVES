@@ -1,5 +1,9 @@
 <!-- plugins: https://gitlab1.ptb.de/saturn02/ptb-quarto-revealjs-theme/-/tree/main/presentation_files/libs/revealjs/plugin -->
 <!-- crazy css: https://gitlab1.ptb.de/saturn02/ptb-quarto-revealjs-theme/-/blob/main/presentation_files/libs/revealjs/dist/reveal.css -->
+
+<!-- arrows: https://github.com/ofkoru/quarto-leader-line --> 
+    <!-- guide: https://omerfarukkoru.com/Packages/quarto-leader-line/example.html -->
+
 <!-- TODO! add different ::::::::::::::::::::::::: levels to templates -->
 <!-- TODO DOC comments above blocks -->
 <!-- FEAT! hard: make js properties injectors, starting with .center https://claude.ai/chat/3820407b-8bc2-4dd7-b6ad-cbd07f4f1382-->
