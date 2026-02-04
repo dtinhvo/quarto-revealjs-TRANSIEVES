@@ -1,3 +1,5 @@
+<!-- TODO! DOCU note that aside will not work, only use inline -->
+
 <!-- plugins: https://gitlab1.ptb.de/saturn02/ptb-quarto-revealjs-theme/-/tree/main/presentation_files/libs/revealjs/plugin -->
 <!-- crazy css: https://gitlab1.ptb.de/saturn02/ptb-quarto-revealjs-theme/-/blob/main/presentation_files/libs/revealjs/dist/reveal.css -->
 
