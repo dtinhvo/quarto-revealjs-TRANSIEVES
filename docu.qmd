@@ -14,6 +14,8 @@ format:
     css: tvo_TRANSIEVES/styles.css
     include-in-header: persistent-header/persistent-header.html # currently have no effect
     title-slide: false
+    mathjax:
+      processEscapes: true
 filters: 
   - reveal-header
 slide-level: 4 # affects reveal-header persistence
